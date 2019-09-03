@@ -29,7 +29,7 @@ public class PyramidMeshMaker : MonoBehaviour
         Vector3 point1 = new Vector3(.5f, 0, -.5f);
         Vector3 point2 = new Vector3(.5f, 0, .5f);
         Vector3 point3 = new Vector3(-.5f, 0, .5f);
-        Vector3 point4 = new Vector3(0, Mathf.Sqrt(Mathf.Pow(.75f, 2) - Mathf.Pow(.5f, 2)), 0);
+        Vector3 point4 = new Vector3(0, Mathf.Sqrt(.75f), 0);
 
         // retrieve or make and then refresh object's shared mesh
         if (myMeshFilter.sharedMesh == null)
@@ -37,6 +37,27 @@ public class PyramidMeshMaker : MonoBehaviour
         Mesh myMesh = myMeshFilter.sharedMesh;
         myMesh.Clear();
 
-        
+        // NOTE: temporarily shares vertices
+        // define mesh's unique vertices
+        myMesh.vertices = new Vector3[]
+        {
+            point0, point1, point2, point3, point4
+        };
+
+        // define mesh's triangles from vertices
+        myMesh.triangles = new int[]
+        {
+            0, 1, 2,
+            0, 2, 3,
+            4, 1, 0,
+            4, 2, 1,
+            4, 3, 2,
+            0, 3, 4
+        };
+
+        // recalculate custom mesh
+        myMesh.RecalculateNormals();
+        myMesh.RecalculateBounds();
+        myMesh.Optimize();
     }
 }
