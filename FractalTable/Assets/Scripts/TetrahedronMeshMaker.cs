@@ -17,8 +17,8 @@ public class TetrahedronMeshMaker : MonoBehaviour
         MeshFilter myMeshFilter = gameObject.GetComponent<MeshFilter>();
         if (myMeshFilter == null)
         {
-            Debug.Log("Warning: Tetrahedron mesh maker lacks Mesh Filter component.");
-            return;
+            Debug.Log("Warning: Tetrahedron mesh maker lacks Mesh Filter component. Adding one now.");
+            myMeshFilter = gameObject.AddComponent<MeshFilter>();
         }
 
         // define basic vertices of tetrahedron
