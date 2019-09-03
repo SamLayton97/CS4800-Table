@@ -45,10 +45,18 @@ public class SierpinskiPyramidGenerator : MonoBehaviour
         List<GameObject> brokenPyramids = new List<GameObject>();
 
         // for each triangle not yet broken by current generation
-        foreach (GameObject pyramid in toBreak)
+        foreach (GameObject currPyramid in toBreak)
         {
-            // scale pyramid by .5
-            pyramid.transform.localScale *= .5f;
+            // scale current pyramid
+            currPyramid.transform.localScale *= .5f;
+
+            // duplicate/reposition pyramids to form new generation of fractal
+            // Note: Duplicate pyramids are instantiated as children of whole
+            // fractal for easy manipulation.
+            currPyramid.transform.localPosition += new Vector3(-.5f, 0, -.5f) * currPyramid.transform.localScale.x;
+            Instantiate(currPyramid, gameObject.transform).transform.localPosition += new Vector3(2.5f, 0, 2.5f);
+            
+
         }
     }
 }
