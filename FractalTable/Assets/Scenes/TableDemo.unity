@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fa5578bed7e9946bcc7a99766d5477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePyramid: {fileID: 0}
+  basePyramid: {fileID: 7778132958191048208}
 --- !u!43 &584883499
 Mesh:
   m_ObjectHideFlags: 0
@@ -579,6 +579,12 @@ PrefabInstance:
 --- !u!4 &7778132958191048207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4446247559065743224, guid: 22200449aca665d458f3299331542283,
+    type: 3}
+  m_PrefabInstance: {fileID: 7778132958191048206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7778132958191048208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1341198602805073329, guid: 22200449aca665d458f3299331542283,
     type: 3}
   m_PrefabInstance: {fileID: 7778132958191048206}
   m_PrefabAsset: {fileID: 0}

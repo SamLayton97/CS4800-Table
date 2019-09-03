@@ -10,6 +10,7 @@ public class SierpinskiPyramidGenerator : MonoBehaviour
 {
     // public variables
     [SerializeField] GameObject basePyramid;
+    List<GameObject> pyramids;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,24 @@ public class SierpinskiPyramidGenerator : MonoBehaviour
             }
         }
 
+        // instantiate list containing all pyramid sub-objects in fractal and add base pyramid
+        pyramids = new List<GameObject>();
+        pyramids.Add(basePyramid);
 
+        // generate sierpinski pyramid
+        GenerateSierpinskiPyramid(pyramids);
+    }
+
+    void GenerateSierpinskiPyramid(List<GameObject> toBreak)
+    {
+        // create a list storing pyramids "broken" during generation
+        List<GameObject> brokenPyramids = new List<GameObject>();
+
+        // for each triangle not yet broken by current generation
+        foreach (GameObject pyramid in toBreak)
+        {
+            // scale pyramid by .5
+            pyramid.transform.localScale *= .5f;
+        }
     }
 }
