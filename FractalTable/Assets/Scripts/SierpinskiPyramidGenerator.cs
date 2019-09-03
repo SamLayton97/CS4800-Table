@@ -55,8 +55,9 @@ public class SierpinskiPyramidGenerator : MonoBehaviour
             // fractal for easy manipulation.
             currPyramid.transform.localPosition += new Vector3(-.5f, 0, -.5f) * currPyramid.transform.localScale.x;
             Instantiate(currPyramid, gameObject.transform).transform.localPosition += new Vector3(2.5f, 0, 2.5f);
-            
-
+            Instantiate(currPyramid, gameObject.transform).transform.localPosition += new Vector3(2.5f, 0, 0);
+            Instantiate(currPyramid, gameObject.transform).transform.localPosition += new Vector3(0, 0, 2.5f);
+            Instantiate(currPyramid, gameObject.transform).transform.localPosition += new Vector3(1.25f, 2.5f * Mathf.Sqrt(.75f), 1.25f);
         }
     }
 }
