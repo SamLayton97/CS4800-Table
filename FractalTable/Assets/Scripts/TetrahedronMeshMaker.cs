@@ -14,8 +14,8 @@ public class TetrahedronMeshMaker : MonoBehaviour
     public void Generate()
     {
         // Retrieve object's mesh filter, warning if none exist
-        MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
-        if (meshFilter == null)
+        MeshFilter myMeshFilter = gameObject.GetComponent<MeshFilter>();
+        if (myMeshFilter == null)
         {
             Debug.Log("Warning: Tetrahedron mesh maker lacks Mesh Filter component.");
             return;
@@ -27,7 +27,28 @@ public class TetrahedronMeshMaker : MonoBehaviour
         Vector3 point2 = new Vector3(0.5f, 0, Mathf.Sqrt(0.75f));
         Vector3 point3 = new Vector3(0.5f, Mathf.Sqrt(0.75f), Mathf.Sqrt(0.75f) / 3);
 
-        // retrieve or make object's shared mesh
+        // retrieve or make and then refresh object's shared mesh
+        if (myMeshFilter.sharedMesh == null)
+            myMeshFilter.sharedMesh = new Mesh();
+        Mesh myMesh = myMeshFilter.sharedMesh;
+        myMesh.Clear();
 
+        // define mesh's unique vertices
+        myMesh.vertices = new Vector3[]
+        {
+            point0, point1, point2,
+            point0, point2, point3,
+            point2, point1, point3,
+            point0, point3, point1
+        };
+
+        // define mesh's triangles from vertices
+        myMesh.triangles = new int[]
+        {
+            0, 1, 2,
+            3, 4, 5,
+            6, 7, 8,
+            9, 10, 11
+        };
     }
 }
