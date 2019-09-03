@@ -20,8 +20,8 @@ public class TetrahedronEditor : Editor
         TetrahedronMeshMaker tetrahedronMesh = myObject.AddComponent<TetrahedronMeshMaker>();
         MeshFilter meshFilter = myObject.GetComponent<MeshFilter>();
 
-        // TODO: generate tetrahedron mesh
+        // generate tetrahedron mesh
         meshFilter.mesh = new Mesh();
-
+        tetrahedronMesh.Generate();
     }
 }

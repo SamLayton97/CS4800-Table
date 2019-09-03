@@ -50,5 +50,10 @@ public class TetrahedronMeshMaker : MonoBehaviour
             6, 7, 8,
             9, 10, 11
         };
+
+        // recalculate custom mesh
+        myMesh.RecalculateNormals();
+        myMesh.RecalculateBounds();
+        myMesh.Optimize();
     }
 }
