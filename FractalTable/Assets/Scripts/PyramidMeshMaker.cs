@@ -11,25 +11,35 @@ using UnityEngine;
 [RequireComponent (typeof (MeshRenderer))]
 public class PyramidMeshMaker : MonoBehaviour
 {
-    // TODO: Generates/regenerates pyramid's custom mesh
+    /// <summary>
+    /// Property with read-access to vertices defining pyramid
+    /// </summary>
+    public Vector3[] Points
+    {
+        get {
+            return new Vector3[] 
+            {
+            new Vector3(-.5f, 0, -.5f),             // bottom left base point
+            new Vector3(.5f, 0, -.5f),              // bottom right base point
+            new Vector3(.5f, 0, .5f),               // top right base point
+            new Vector3(-.5f, 0, .5f),              // top left base point
+            new Vector3(0, Mathf.Sqrt(.75f), 0)     // peak of pyramid; 
+            };
+        }
+    }
+
+    /// <summary>
+    /// Generates/regenerates pyramid's custom mesh
+    /// </summary>
     public void Generate()
     {
-        Debug.Log("Generate!");
-
         // Retrieve object's mesh filter, warning if none exist
         MeshFilter myMeshFilter = gameObject.GetComponent<MeshFilter>();
         if (myMeshFilter == null)
         {
-            Debug.Log("Warning: Tetrahedron mesh maker lacks Mesh Filter component. Adding one now.");
+            Debug.Log("Warning: Pyramid Mesh Maker lacks Mesh Filter component. Adding component now.");
             myMeshFilter = gameObject.AddComponent<MeshFilter>();
         }
-
-        // Define vertices of pyramid
-        Vector3 point0 = new Vector3(-.5f, 0, -.5f);
-        Vector3 point1 = new Vector3(.5f, 0, -.5f);
-        Vector3 point2 = new Vector3(.5f, 0, .5f);
-        Vector3 point3 = new Vector3(-.5f, 0, .5f);
-        Vector3 point4 = new Vector3(0, Mathf.Sqrt(.75f), 0);
 
         // retrieve or make and then refresh object's shared mesh
         if (myMeshFilter.sharedMesh == null)
@@ -40,12 +50,12 @@ public class PyramidMeshMaker : MonoBehaviour
         // define mesh's unique vertices
         myMesh.vertices = new Vector3[]
         {
-            point0, point1, point2,
-            point0, point2, point3,
-            point4, point1, point0,
-            point4, point2, point1,
-            point4, point3, point2,
-            point0, point3, point4
+            Points[0], Points[1], Points[2],
+            Points[0], Points[2], Points[3],
+            Points[4], Points[1], Points[0],
+            Points[4], Points[2], Points[1],
+            Points[4], Points[3], Points[2],
+            Points[0], Points[3], Points[4]
         };
 
         // define mesh's triangles from vertices
