@@ -10,7 +10,7 @@ using UnityEditor;
 public class TetrahedronEditor : Editor
 {
     // Defines path to create object in editor
-    [MenuItem ("GameObject/Create Custom/Tetrahedron")]
+    [MenuItem ("GameObject/Custom/Tetrahedron")]
 
     // Called upon creation in editor
     static void Create()

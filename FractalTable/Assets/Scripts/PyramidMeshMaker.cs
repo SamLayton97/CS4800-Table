@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Procedurally generates a custom equilateral
+/// pyramid mesh
+/// </summary>
+[RequireComponent (typeof (MeshCollider))]
+[RequireComponent (typeof (MeshFilter))]
+[RequireComponent (typeof (MeshRenderer))]
 public class PyramidMeshMaker : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // TODO: Generates/regenerates pyramid's custom mesh
+    public void Generate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("Generate!");
     }
 }
