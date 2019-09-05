@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\CustomMeshMaker.cs" />
     <Compile Include="Assets\Scripts\PyramidMeshMaker.cs" />
     <Compile Include="Assets\Scripts\SierpinskiPyramidGenerator.cs" />
+    <Compile Include="Assets\Scripts\SierpinskiTetrahedronGenerator.cs" />
     <Compile Include="Assets\Scripts\TetrahedronMeshMaker.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Sam/Documents/GitHub/CS4800-Table/FractalTable/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
