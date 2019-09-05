@@ -42,13 +42,21 @@ public class SierpinskiTetrahedronGenerator : MonoBehaviour
     /// <param name="toBreak">tetrahedron to "break" with next generation</param>
     void GenerateSierpinskiTetrahedron(Transform toBreak)
     {
+        float newScale = toBreak.localScale.x / 2;
+
         // scale current tetrahedron
-        toBreak.localScale *= 0.5f;
+        toBreak.localScale *= .5f;
 
         // TODO: duplicate/reposition tetrahedrons to form next generation of fractal
         // Note: Duplicate tetrahedrons are instantiated as children of whole
         // fractal for easy manipulation.
-
+        Instantiate(toBreak.gameObject, gameObject.transform).transform.localPosition += 
+            new Vector3(newScale * .5f, 0, newScale * Mathf.Sqrt(.75f) / -3);
+        Instantiate(toBreak.gameObject, gameObject.transform).transform.localPosition +=
+            new Vector3(0, 0, newScale * 2 * Mathf.Sqrt(.75f) / 3);
+        Instantiate(toBreak.gameObject, gameObject.transform).transform.localPosition +=
+            new Vector3(0, newScale * Mathf.Sqrt(.75f), 0);
+        toBreak.localPosition += new Vector3(newScale * -.5f, 0, newScale * Mathf.Sqrt(.75f) / -3);
 
         // TODO: start generation with "broken" child objects of entire fractal
     }
