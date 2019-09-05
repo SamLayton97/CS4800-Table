@@ -9,7 +9,7 @@ using UnityEngine;
 [RequireComponent (typeof (MeshCollider))]
 [RequireComponent (typeof (MeshFilter))]
 [RequireComponent (typeof (MeshRenderer))]
-public class PyramidMeshMaker : MonoBehaviour
+public class PyramidMeshMaker : CustomMeshMaker
 {
     /// <summary>
     /// Property with read-access to vertices defining pyramid
@@ -31,7 +31,7 @@ public class PyramidMeshMaker : MonoBehaviour
     /// <summary>
     /// Generates/regenerates pyramid's custom mesh
     /// </summary>
-    public void Generate()
+    public override void Generate()
     {
         // Retrieve object's mesh filter, warning if none exist
         MeshFilter myMeshFilter = gameObject.GetComponent<MeshFilter>();

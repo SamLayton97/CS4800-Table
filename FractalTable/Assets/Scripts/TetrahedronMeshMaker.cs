@@ -8,10 +8,10 @@ using UnityEngine;
 [RequireComponent (typeof (MeshCollider))]
 [RequireComponent (typeof (MeshFilter))]
 [RequireComponent (typeof (MeshRenderer))]
-public class TetrahedronMeshMaker : MonoBehaviour
+public class TetrahedronMeshMaker : CustomMeshMaker
 {
     // Generates/Regenerates tetrahedron's custom mesh
-    public void Generate()
+    public override void Generate()
     {
         // Retrieve object's mesh filter, warning if none exist
         MeshFilter myMeshFilter = gameObject.GetComponent<MeshFilter>();
@@ -22,11 +22,6 @@ public class TetrahedronMeshMaker : MonoBehaviour
         }
 
         // define basic vertices of tetrahedron
-        //Vector3 point0 = new Vector3(0, 0, 0);
-        //Vector3 point1 = new Vector3(1, 0, 0);
-        //Vector3 point2 = new Vector3(0.5f, 0, Mathf.Sqrt(0.75f));
-        //Vector3 point3 = new Vector3(0.5f, Mathf.Sqrt(0.75f), Mathf.Sqrt(0.75f) / 3);
-
         Vector3 point0 = new Vector3(-0.5f, 0, -1 * Mathf.Sqrt(0.75f) / 3);
         Vector3 point1 = new Vector3(0.5f, 0, -1 * Mathf.Sqrt(0.75f) / 3);
         Vector3 point2 = new Vector3(0, 0, 2 * Mathf.Sqrt(0.75f) / 3);

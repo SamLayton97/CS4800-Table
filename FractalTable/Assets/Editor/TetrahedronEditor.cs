@@ -7,7 +7,7 @@ using UnityEditor;
 /// Creates a tetrahedron object in the Unity Editor
 /// </summary>
 [CustomEditor (typeof (TetrahedronMeshMaker))]
-public class TetrahedronEditor : Editor
+public class TetrahedronEditor : CustomMeshEditor
 {
     // Defines path to create object in editor
     [MenuItem ("GameObject/Custom/Tetrahedron")]
