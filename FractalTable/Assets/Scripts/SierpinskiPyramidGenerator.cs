@@ -32,36 +32,37 @@ public class SierpinskiPyramidGenerator : MonoBehaviour
             }
         }
 
-        // instantiate list containing all pyramid sub-objects in fractal and add base pyramid
-        pyramids = new List<GameObject>();
-        pyramids.Add(basePyramid);
-
-        // generate sierpinski pyramid
-        GenerateSierpinskiPyramid(pyramids);
+        // generate sierpinski pyramid from base pyramid
+        GenerateSierpinskiPyramid(basePyramid.transform);
     }
 
-    void GenerateSierpinskiPyramid(List<GameObject> toBreak)
+    /// <summary>
+    /// Recursively generates a Sierpinski pyramid from 
+    /// a basic starting pyramid.
+    /// </summary>
+    /// <param name="toBreak">pyramid to break with next generation</param>
+    void GenerateSierpinskiPyramid(Transform toBreak)
     {
         // if scale of next generation doesn't exceed fractal's level of precision, continue generation
-        float newScale = toBreak[0].transform.localScale.x / 2;
+        float newScale = toBreak.localScale.x / 2;
         if (newScale > precision)
         {
-            // for each triangle not yet broken by current generation
-            foreach (GameObject currPyramid in toBreak)
-            {
-                // scale current pyramid
-                currPyramid.transform.localScale *= .5f;
+            // scale current pyramid
+            toBreak.localScale *= .5f;
 
-                // duplicate/reposition pyramids to form new generation of fractal
-                // Note: Duplicate pyramids are instantiated as children of whole
-                // fractal for easy manipulation.
-                currPyramid.transform.localPosition += new Vector3(-.5f, 0, -.5f) * currPyramid.transform.localScale.x;
-                Instantiate(currPyramid, gameObject.transform).transform.localPosition += new Vector3(newScale, 0, newScale);
-                Instantiate(currPyramid, gameObject.transform).transform.localPosition += new Vector3(newScale, 0, 0);
-                Instantiate(currPyramid, gameObject.transform).transform.localPosition += new Vector3(0, 0, newScale);
-                Instantiate(currPyramid, gameObject.transform).transform.localPosition += 
-                    new Vector3(newScale / 2, newScale * Mathf.Sqrt(.75f), newScale / 2);
-            }
+            // duplicate/reposition pyramids to form next generation of fractal
+            // Note: Duplicate pyramids are instantiated as children of whole
+            // fractal for easy manipulation.
+            toBreak.localPosition += new Vector3(-.5f, 0, -.5f) * toBreak.localScale.x;
+            Instantiate(toBreak.gameObject, gameObject.transform).transform.localPosition += new Vector3(newScale, 0, newScale);
+            Instantiate(toBreak.gameObject, gameObject.transform).transform.localPosition += new Vector3(newScale, 0, 0);
+            Instantiate(toBreak.gameObject, gameObject.transform).transform.localPosition += new Vector3(0, 0, newScale);
+            Instantiate(toBreak.gameObject, gameObject.transform).transform.localPosition +=
+                new Vector3(newScale / 2, newScale * Mathf.Sqrt(.75f), newScale / 2);
+
+            // start generation with "broken" child pyramids of entire fractal
+            for (int nextToBreak = 0; nextToBreak < gameObject.transform.childCount; nextToBreak++)
+                GenerateSierpinskiPyramid(gameObject.transform.GetChild(nextToBreak));
         }
     }
 }
