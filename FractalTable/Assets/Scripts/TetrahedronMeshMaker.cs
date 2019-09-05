@@ -22,10 +22,15 @@ public class TetrahedronMeshMaker : MonoBehaviour
         }
 
         // define basic vertices of tetrahedron
-        Vector3 point0 = Vector3.zero;
-        Vector3 point1 = Vector3.right;
-        Vector3 point2 = new Vector3(0.5f, 0, Mathf.Sqrt(0.75f));
-        Vector3 point3 = new Vector3(0.5f, Mathf.Sqrt(0.75f), Mathf.Sqrt(0.75f) / 3);
+        //Vector3 point0 = new Vector3(0, 0, 0);
+        //Vector3 point1 = new Vector3(1, 0, 0);
+        //Vector3 point2 = new Vector3(0.5f, 0, Mathf.Sqrt(0.75f));
+        //Vector3 point3 = new Vector3(0.5f, Mathf.Sqrt(0.75f), Mathf.Sqrt(0.75f) / 3);
+
+        Vector3 point0 = new Vector3(-0.5f, 0, -1 * Mathf.Sqrt(0.75f) / 3);
+        Vector3 point1 = new Vector3(0.5f, 0, -1 * Mathf.Sqrt(0.75f) / 3);
+        Vector3 point2 = new Vector3(0, 0, 2 * Mathf.Sqrt(0.75f) / 3);
+        Vector3 point3 = new Vector3(0, Mathf.Sqrt(0.75f), 0);
 
         // retrieve or make and then refresh object's shared mesh
         if (myMeshFilter.sharedMesh == null)
