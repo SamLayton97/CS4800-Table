@@ -11,7 +11,6 @@ public class SierpinskiPyramidGenerator : MonoBehaviour
     // public variables
     [SerializeField] float precision = 0.1f;       // level of detail generation continues to until it stops
     [SerializeField] GameObject basePyramid;
-    List<GameObject> pyramids;
 
     // Start is called before the first frame update
     void Start()
