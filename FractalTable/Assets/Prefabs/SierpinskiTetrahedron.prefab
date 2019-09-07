@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1032001802401145196}
   - component: {fileID: 1032001802401145195}
+  - component: {fileID: 3434753065618251098}
   m_Layer: 0
   m_Name: SierpinskiTetrahedron
   m_TagString: Untagged
@@ -46,6 +47,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   precision: 0.08
   baseTetrahedron: {fileID: 1032001802150981949}
+--- !u!114 &3434753065618251098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032001802401145197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99765e4da77648440aa2180dbf201701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fromColor: {r: 1, g: 0.07058824, b: 0, a: 0}
+  toColor: {r: 0.37254903, g: 0.043137256, b: 0, a: 0}
 --- !u!1001 &486636185087304358
 PrefabInstance:
   m_ObjectHideFlags: 0

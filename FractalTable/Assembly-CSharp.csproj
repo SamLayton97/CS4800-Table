@@ -55,12 +55,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CustomMeshEditor.cs" />
-     <Compile Include="Assets\Scripts\CustomMeshMaker.cs" />
-     <Compile Include="Assets\Scripts\PyramidMeshMaker.cs" />
-     <Compile Include="Assets\Scripts\SierpinskiPyramidGenerator.cs" />
-     <Compile Include="Assets\Scripts\SierpinskiTetrahedronGenerator.cs" />
-     <Compile Include="Assets\Scripts\TetrahedronMeshMaker.cs" />
+     <Compile Include="Assets\Scripts\Fractal Generators\SierpinskiPyramidGenerator.cs" />
+     <Compile Include="Assets\Scripts\Fractal Generators\SierpinskiTetrahedronGenerator.cs" />
+     <Compile Include="Assets\Scripts\GradientInChildren.cs" />
+     <Compile Include="Assets\Scripts\Mesh Makers\CustomMeshEditor.cs" />
+     <Compile Include="Assets\Scripts\Mesh Makers\CustomMeshMaker.cs" />
+     <Compile Include="Assets\Scripts\Mesh Makers\PyramidMeshMaker.cs" />
+     <Compile Include="Assets\Scripts\Mesh Makers\TetrahedronMeshMaker.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Sam/Documents/GitHub/CS4800-Table/FractalTable/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
