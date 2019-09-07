@@ -9,16 +9,16 @@ using UnityEngine;
 public class OrbitCamera : MonoBehaviour
 {
     // public variables
-    public Transform targetTransform;
-    public Vector3 lookOffset;
-    public float orbitSpeed = 5f;
+    public Transform targetTransform;       // transform of object to orbit about
+    public Vector3 lookOffset;              // initial offset to rotate camera (in degrees)
+    public float orbitSpeed = 5f;           // speed modifier to rotate camera at
 
     // Start is called before the first frame update
     void Start()
     {
         // set camera to start facing object plus offset
         transform.LookAt(targetTransform);
-        //transform.Rotate(lookOffset);
+        transform.Rotate(lookOffset);
     }
 
     // Update is called once per frame
@@ -26,8 +26,5 @@ public class OrbitCamera : MonoBehaviour
     {
         // rotate camera around object's y-axis using "Mouse X" input
         transform.RotateAround(targetTransform.position, Vector3.down, Input.GetAxis("Mouse X") * Time.deltaTime * orbitSpeed);
-
-        Debug.Log("Mouse X: " + Input.GetAxis("Mouse X"));
-        //Debug.Log("Mouse Y: " + Input.GetAxis("Mouse Y"));
     }
 }

@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1205700948}
-  lookOffset: {x: -20, y: 0, z: 0}
+  lookOffset: {x: -15, y: 0, z: 0}
   orbitSpeed: 60
 --- !u!1001 &1176550376
 PrefabInstance:
