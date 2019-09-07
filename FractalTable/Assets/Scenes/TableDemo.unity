@@ -584,32 +584,32 @@ PrefabInstance:
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
       propertyPath: startPoint.y
-      value: 3.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
       propertyPath: fromColor.g
-      value: 0.84705883
+      value: 0.25490198
       objectReference: {fileID: 0}
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
       propertyPath: fromColor.b
-      value: 0
+      value: 0.7411765
       objectReference: {fileID: 0}
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
       propertyPath: fromColor.r
-      value: 0.8627451
+      value: 0.05882353
       objectReference: {fileID: 0}
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
       propertyPath: toColor.r
-      value: 0.56078434
+      value: 0.8627451
       objectReference: {fileID: 0}
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
       propertyPath: toColor.g
-      value: 0.54901963
+      value: 0.84705883
       objectReference: {fileID: 0}
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
@@ -625,6 +625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: endPoint.z
       value: -1.39827
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
+        type: 3}
+      propertyPath: radius
+      value: 4.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33c144de8d7f2f74eabf5b3ce723f1ec, type: 3}
@@ -788,21 +793,31 @@ PrefabInstance:
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
       propertyPath: radius
-      value: 4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
       propertyPath: toColor.r
-      value: 0.037148
-      objectReference: {fileID: 0}
-    - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
-        type: 3}
-      propertyPath: toColor.g
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
         type: 3}
+      propertyPath: toColor.g
+      value: 0.07058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
+        type: 3}
       propertyPath: toColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
+        type: 3}
+      propertyPath: fromColor.g
+      value: 0.98039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434753065618251098, guid: 33c144de8d7f2f74eabf5b3ce723f1ec,
+        type: 3}
+      propertyPath: fromColor.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
