@@ -13,7 +13,7 @@ public class SierpinskiTetrahedronGenerator : MonoBehaviour
     [SerializeField] GameObject baseTetrahedron;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // if base tetrahedron wasn't set before startup
         if (baseTetrahedron == null)
