@@ -24,7 +24,17 @@ public class OrbitCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // rotate camera around object's y-axis using "Mouse X" input
-        transform.RotateAround(targetTransform.position, Vector3.down, Input.GetAxis("Mouse X") * Time.deltaTime * orbitSpeed);
+        // if user is holding mouse button down
+        if (Input.GetMouseButton(0))
+        {
+            // temporarily hide mouse
+            Cursor.visible = false;
+
+            // rotate camera around object's y-axis using "Mouse X" input
+            transform.RotateAround(targetTransform.position, Vector3.down, Input.GetAxis("Mouse X") * Time.deltaTime * orbitSpeed * -1);
+        }
+        // otherwise, show cursor again
+        else
+            Cursor.visible = true;
     }
 }
