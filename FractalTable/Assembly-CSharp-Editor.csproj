@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\CustomMeshEditor.cs" />
      <Compile Include="Assets\Editor\PyramidEditor.cs" />
      <Compile Include="Assets\Editor\TetrahedronEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">

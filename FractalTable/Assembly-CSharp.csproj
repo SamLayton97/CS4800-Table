@@ -55,10 +55,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ApplicationCloser.cs" />
      <Compile Include="Assets\Scripts\Fractal Generators\SierpinskiPyramidGenerator.cs" />
      <Compile Include="Assets\Scripts\Fractal Generators\SierpinskiTetrahedronGenerator.cs" />
      <Compile Include="Assets\Scripts\GradientInChildren.cs" />
-     <Compile Include="Assets\Scripts\Mesh Makers\CustomMeshEditor.cs" />
      <Compile Include="Assets\Scripts\Mesh Makers\CustomMeshMaker.cs" />
      <Compile Include="Assets\Scripts\Mesh Makers\PyramidMeshMaker.cs" />
      <Compile Include="Assets\Scripts\Mesh Makers\TetrahedronMeshMaker.cs" />

@@ -275,3 +275,14 @@ C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\obj\Debug\Assembly-CShar
 C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\obj\Debug\Assembly-CSharp-Editor.csproj.CopyComplete
 C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\obj\Debug\Assembly-CSharp-Editor.dll
 C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\obj\Debug\Assembly-CSharp-Editor.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\UnityEditor.TestRunner.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\UnityEngine.TestRunner.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\Unity.Timeline.Editor.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\Unity.VSCode.Editor.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\Unity.TextMeshPro.Editor.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\UnityEngine.UI.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\Unity.Timeline.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\Unity.CollabProxy.Editor.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\Unity.Rider.Editor.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\Unity.TextMeshPro.pdb
+C:\Users\Sam\Documents\GitHub\CS4800-Table\FractalTable\Temp\bin\Debug\UnityEditor.UI.pdb
