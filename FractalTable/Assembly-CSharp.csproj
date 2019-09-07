@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Mesh Makers\CustomMeshMaker.cs" />
      <Compile Include="Assets\Scripts\Mesh Makers\PyramidMeshMaker.cs" />
      <Compile Include="Assets\Scripts\Mesh Makers\TetrahedronMeshMaker.cs" />
+     <Compile Include="Assets\Scripts\OrbitCamera.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Sam/Documents/GitHub/CS4800-Table/FractalTable/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
