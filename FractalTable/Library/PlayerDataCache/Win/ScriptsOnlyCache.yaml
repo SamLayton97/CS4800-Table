@@ -42,16 +42,18 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10790}
+      Script: {instanceID: 9818}
     - Class: 114
-      Script: {instanceID: 11096}
+      Script: {instanceID: 10794}
     - Class: 114
-      Script: {instanceID: 11190}
+      Script: {instanceID: 10964}
     - Class: 114
-      Script: {instanceID: 12610}
+      Script: {instanceID: 11102}
     - Class: 114
-      Script: {instanceID: 20910}
+      Script: {instanceID: 11196}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -112,6 +114,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 74786028b622f78809eaad2ab35ec391
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OrbitCamera
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -312,12 +320,6 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-Editor.dll
-    namespaceName: 
-    className: CustomMeshEditor
-  - hash:
-      serializedVersion: 2
       Hash: 12e64d607873da15ad3f833620350d51
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -376,6 +378,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ApplicationCloser
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -508,19 +516,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 74786028b622f78809eaad2ab35ec391
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: OrbitCamera
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ApplicationCloser
   platform: 5
   scenePathNames:
   - Assets/Scenes/TableDemo.unity
-  playerPath: C:/Users/Sam/Documents/GitHub/CS4800-Table/FractalTable/Builds/FractalTable.exe
+  playerPath: C:/Users/Sam/Documents/GitHub/CS4800-Table/FractalTable/Builds/FractalSculpture.exe
